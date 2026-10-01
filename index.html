@@ -36,7 +36,7 @@
       <desc id="desc">SVG drawing of a house, sky, grass, sun, cloud, tree, fence, path, mailbox, smoke, and windows.</desc>
 
       <defs>
-        <!-- Reusable Window Definition (35x30 rect with mullion lines) -->
+        <!-- Reusable Window Definition -->
         <g id="window">
           <rect x="0" y="0" width="35" height="30" fill="#78b9e6" stroke="#336699" stroke-width="2" />
           <line x1="0" y1="15" x2="35" y2="15" stroke="#336699" stroke-width="2" />
@@ -44,7 +44,7 @@
         </g>
       </defs>
 
-      <!-- Step 4 Top-Left Demo Window -->
+      <!-- Top-Left Demo Window -->
       <use href="#window" transform="translate(5, 5)" />
 
       <!-- Sky and Grass Background -->
@@ -69,7 +69,7 @@
       <rect x="320" y="220" width="160" height="120" fill="#fce0bd" stroke="#8b5a2b" stroke-width="2" />
       <polygon points="300,220 400,150 500,220" fill="#b31b1b" />
 
-      <!-- Windows (Placed using <use> and translate) -->
+      <!-- Windows -->
       <use href="#window" transform="translate(340, 240)" />
       <use href="#window" transform="translate(425, 240)" />
 
@@ -77,25 +77,43 @@
       <rect x="385" y="275" width="30" height="65" fill="#c49064" stroke="#5c3a1e" stroke-width="1.5" />
       <circle cx="410" cy="310" r="2" fill="#333333" />
 
-      <!-- Curved Stone Footpath -->
-      <path d="M 400 340 C 370 380, 430 420, 370 460" fill="none" stroke="#d2b48c" stroke-width="16" />
-      <!-- Stepping Stones -->
-      <ellipse cx="400" cy="355" rx="6" ry="3" fill="#e6dcd3" />
-      <ellipse cx="388" cy="375" rx="6" ry="3" fill="#e6dcd3" />
-      <ellipse cx="380" cy="395" rx="6" ry="3" fill="#e6dcd3" />
-      <ellipse cx="373" cy="415" rx="6" ry="3" fill="#e6dcd3" />
-      <ellipse cx="370" cy="435" rx="6" ry="3" fill="#e6dcd3" />
+      <!-- U-Curved Brown Footpath (Hook shape starting at door) -->
+      <path d="M 400 340 Q 430 460 380 460 T 320 380" fill="none" stroke="#d2b48c" stroke-width="14" stroke-linecap="round" />
 
-      <!-- Fence (Lowered to sit in front of the house and garden) -->
-      <polyline points="200,340 220,320 240,340 260,320 280,340 300,320 320,340 340,320 360,340 380,320 400,340 420,320 440,340 460,320 480,340 500,320 520,340 540,320 560,340" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
+      <!-- Stepping Stones Following the Curve -->
+      <g fill="#e6dcd3">
+        <ellipse cx="395" cy="355" rx="9" ry="5" />
+        <ellipse cx="398" cy="380" rx="9" ry="5" />
+        <ellipse cx="395" cy="405" rx="9" ry="5" />
+        <ellipse cx="388" cy="425" rx="9" ry="5" />
+        <ellipse cx="372" cy="442" rx="9" ry="5" opacity="0.9" />
+        <ellipse cx="350" cy="440" rx="9" ry="5" opacity="0.9" />
+      </g>
+
+      <!-- Fence with Picket Posts (Zig-Zag Top + Vertical Posts) -->
+      <!-- Vertical Fence Posts -->
+      <g stroke="#ffffff" stroke-width="6" stroke-linecap="square">
+        <line x1="200" y1="340" x2="200" y2="370" />
+        <line x1="240" y1="340" x2="240" y2="370" />
+        <line x1="280" y1="340" x2="280" y2="370" />
+        <line x1="320" y1="340" x2="320" y2="370" />
+        <line x1="360" y1="340" x2="360" y2="370" />
+        <line x1="400" y1="340" x2="400" y2="370" />
+        <line x1="440" y1="340" x2="440" y2="370" />
+        <line x1="480" y1="340" x2="480" y2="370" />
+        <line x1="520" y1="340" x2="520" y2="370" />
+        <line x1="560" y1="340" x2="560" y2="370" />
+      </g>
+      <!-- Fence Zig-Zag Top Bar -->
+      <polyline points="200,340 220,320 240,340 260,320 280,340 300,320 320,340 340,320 360,340 380,320 400,340 420,320 440,340 460,320 480,340 500,320 520,340 540,320 560,340" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="miter" />
 
       <!-- Mailbox -->
-      <rect x="185" y="340" width="8" height="30" fill="#6e4727" />
-      <rect x="178" y="325" width="22" height="16" rx="3" fill="#7d9db3" stroke="#4a6375" />
-      <text x="180" y="336" font-size="7" fill="#ffffff" font-family="sans-serif">MAIL</text>
+      <rect x="185" y="325" width="8" height="30" fill="#6e4727" />
+      <rect x="178" y="310" width="22" height="16" rx="3" fill="#7d9db3" stroke="#333" stroke-width="1.5" />
+      <text x="180" y="321" font-size="7" fill="#111" font-family="sans-serif" font-weight="bold">MAIL</text>
 
       <!-- Welcome Text Label -->
-      <text x="400" y="480" text-anchor="middle" font-size="24" fill="#1b4d1b" font-family="sans-serif">Welcome to the House &amp; Garden</text>
+      <text x="400" y="485" text-anchor="middle" font-size="24" fill="#1b4d1b" font-family="sans-serif">Welcome to the House &amp; Garden</text>
     </svg>
   </figure>
 
