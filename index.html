@@ -53,5 +53,38 @@
     <figcaption>Original scene</figcaption>
   </figure>
 
+  <figure id="scene-annotated-figure">
+    <svg id="scene-annotated" viewBox="0 0 800 500">
+      <!-- (Duplicate the original SVG elements here) -->
+      <rect x="0" y="0" width="800" height="250" fill="#78c7f0" />
+      <rect x="0" y="250" width="800" height="250" fill="#60bf43" />
+      <circle cx="100" cy="100" r="40" fill="#ffd700" />
+      <ellipse cx="220" cy="90" rx="40" ry="25" fill="#ffffff" />
+      <rect x="630" y="310" width="20" height="40" fill="#8b5a2b" />
+      <circle cx="640" cy="280" r="35" fill="#2d8a3a" />
+      <rect x="320" y="220" width="160" height="120" fill="#fce4c0" />
+      <polygon points="300,220 400,150 500,220" fill="#aa1111" />
+      <rect x="440" y="160" width="20" height="40" fill="#8b5a2b" />
+      <rect x="385" y="275" width="30" height="65" fill="#c49064" />
+      <polyline points="200,340 560,340" fill="none" stroke="#ffffff" stroke-width="5" />
+      <path d="M 400 340 C 350 400, 450 450, 320 400" fill="none" stroke="#d2b48c" stroke-width="12" />
+      <text x="400" y="480" text-anchor="middle" font-size="24">Welcome to the House &amp; Garden</text>
+
+      <!-- Annotations Group -->
+      <g id="annotations" font-size="12" fill="#333" pointer-events="none">
+        <text x="145" y="105">circle (cx=100, cy=100, r=40)</text>
+        <line x1="140" y1="100" x2="100" y2="100" stroke="#999" stroke-width="1" />
+
+        <text x="265" y="85">ellipse (cx=220, cy=90, rx=40, ry=25)</text>
+        <line x1="260" y1="85" x2="220" y2="90" stroke="#999" stroke-width="1" />
+
+        <text x="490" y="235">rect (x=320, y=220, w=160, h=120)</text>
+        <text x="510" y="150">polygon points="300,220 400,150..."</text>
+        <text x="320" y="420">path M400 340 C350 400...</text>
+      </g>
+    </svg>
+    <figcaption>Annotated scene (Step 2)</figcaption>
+  </figure>
+  
 </body>
 </html>
