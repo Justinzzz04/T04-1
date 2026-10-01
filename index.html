@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>T04-1: SVG House and Garden</title>
+  <title>T04 – SVG House &amp; Garden</title>
   <style>
     body {
       font-family: sans-serif;
@@ -33,86 +33,69 @@
   <figure>
     <svg viewBox="0 0 800 500" aria-labelledby="title desc">
       <title id="title">House and Garden Scene</title>
-      <desc id="desc">SVG drawing of a house, sky, grass, sun, cloud, tree, fence, path, mailbox, smoke, windows, and coordinate text annotations.</desc>
+      <desc id="desc">SVG drawing of a house, sky, grass, sun, cloud, tree, fence, path, mailbox, smoke, and windows.</desc>
 
       <defs>
-        <!-- Reusable Window Definition (Group <g>) -->
+        <!-- Reusable Window Definition (35x30 rect with mullion lines) -->
         <g id="window">
-          <rect x="0" y="0" width="35" height="30" fill="#aed8f2" stroke="#336699" stroke-width="2" />
+          <rect x="0" y="0" width="35" height="30" fill="#78b9e6" stroke="#336699" stroke-width="2" />
           <line x1="0" y1="15" x2="35" y2="15" stroke="#336699" stroke-width="2" />
           <line x1="17.5" y1="0" x2="17.5" y2="30" stroke="#336699" stroke-width="2" />
         </g>
       </defs>
 
       <!-- Step 4 Top-Left Demo Window -->
-      <use href="#window" transform="translate(15, 15)" />
+      <use href="#window" transform="translate(5, 5)" />
 
-      <!-- Sky and Grass -->
-      <rect x="0" y="0" width="800" height="250" fill="#7ac7f0" />
-      <rect x="0" y="250" width="800" height="250" fill="#66bb46" />
+      <!-- Sky and Grass Background -->
+      <rect x="0" y="0" width="800" height="250" fill="#75c5eb" />
+      <rect x="0" y="250" width="800" height="250" fill="#5cb838" />
 
       <!-- Sun and Cloud -->
-      <circle cx="120" cy="110" r="40" fill="#ffcc00" stroke="#f0b000" stroke-width="3" />
-      <ellipse cx="280" cy="105" rx="45" ry="22" fill="#ffffff" opacity="0.85" />
+      <circle cx="100" cy="100" r="40" fill="#fcd240" stroke="#f2b600" stroke-width="4" />
+      <ellipse cx="220" cy="90" rx="40" ry="25" fill="#ffffff" opacity="0.9" />
+      <ellipse cx="200" cy="90" rx="30" ry="20" fill="#ffffff" opacity="0.9" />
 
       <!-- Chimney Smoke Puffs -->
-      <ellipse cx="505" cy="135" rx="6" ry="4" fill="#ffffff" opacity="0.6" />
-      <ellipse cx="508" cy="122" rx="10" ry="6" fill="#ffffff" opacity="0.4" />
+      <ellipse cx="455" cy="140" rx="6" ry="4" fill="#ffffff" opacity="0.6" />
+      <ellipse cx="458" cy="125" rx="10" ry="6" fill="#ffffff" opacity="0.4" />
 
       <!-- Tree -->
-      <rect x="630" y="310" width="20" height="45" fill="#8b5a2b" />
-      <circle cx="640" cy="280" r="38" fill="#1b8a38" />
+      <rect x="630" y="320" width="20" height="40" fill="#8b5a2b" />
+      <circle cx="640" cy="280" r="35" fill="#1e822a" />
 
-      <!-- House Base, Chimney and Roof -->
-      <rect x="495" y="155" width="22" height="45" fill="#8b5a2b" />
+      <!-- House Base, Chimney, and Roof -->
+      <rect x="440" y="160" width="20" height="40" fill="#8b5a2b" />
       <rect x="320" y="220" width="160" height="120" fill="#fce0bd" stroke="#8b5a2b" stroke-width="2" />
-      <polygon points="295,220 400,140 505,220" fill="#aa1111" />
+      <polygon points="300,220 400,150 500,220" fill="#b31b1b" />
 
-      <!-- Door -->
-      <rect x="385" y="275" width="30" height="65" fill="#c49064" stroke="#5c3a1e" stroke-width="1.5" />
-      <circle cx="410" cy="310" r="2" fill="#333" />
-
-      <!-- Windows Placed using <use> and translate -->
+      <!-- Windows (Placed using <use> and translate) -->
       <use href="#window" transform="translate(340, 240)" />
       <use href="#window" transform="translate(425, 240)" />
 
-      <!-- Path and Stepping Stones -->
-      <path d="M 400 340 C 350 400, 450 450, 320 400" fill="none" stroke="#d2b48c" stroke-width="14" />
-      <ellipse cx="380" cy="365" rx="10" ry="5" fill="#e6dcd3" />
-      <ellipse cx="385" cy="390" rx="10" ry="5" fill="#e6dcd3" />
-      <ellipse cx="375" cy="415" rx="10" ry="5" fill="#e6dcd3" />
+      <!-- Front Door -->
+      <rect x="385" y="275" width="30" height="65" fill="#c49064" stroke="#5c3a1e" stroke-width="1.5" />
+      <circle cx="410" cy="310" r="2" fill="#333333" />
 
-      <!-- Fence -->
+      <!-- Curved Stone Footpath -->
+      <path d="M 400 340 C 370 380, 430 420, 370 460" fill="none" stroke="#d2b48c" stroke-width="16" />
+      <!-- Stepping Stones -->
+      <ellipse cx="400" cy="355" rx="6" ry="3" fill="#e6dcd3" />
+      <ellipse cx="388" cy="375" rx="6" ry="3" fill="#e6dcd3" />
+      <ellipse cx="380" cy="395" rx="6" ry="3" fill="#e6dcd3" />
+      <ellipse cx="373" cy="415" rx="6" ry="3" fill="#e6dcd3" />
+      <ellipse cx="370" cy="435" rx="6" ry="3" fill="#e6dcd3" />
+
+      <!-- Fence (Lowered to sit in front of the house and garden) -->
       <polyline points="200,340 220,320 240,340 260,320 280,340 300,320 320,340 340,320 360,340 380,320 400,340 420,320 440,340 460,320 480,340 500,320 520,340 540,320 560,340" fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="round" />
 
       <!-- Mailbox -->
-      <rect x="195" y="325" width="12" height="35" fill="#6e4727" />
-      <rect x="187" y="310" width="28" height="18" rx="4" fill="#698396" />
-      <text x="190" y="323" font-size="8" fill="#ffffff" font-family="sans-serif">MAIL</text>
+      <rect x="185" y="340" width="8" height="30" fill="#6e4727" />
+      <rect x="178" y="325" width="22" height="16" rx="3" fill="#7d9db3" stroke="#4a6375" />
+      <text x="180" y="336" font-size="7" fill="#ffffff" font-family="sans-serif">MAIL</text>
 
       <!-- Welcome Text Label -->
-      <text x="400" y="470" text-anchor="middle" font-size="24" fill="#1b4d1b" font-family="sans-serif">Welcome to the House &amp; Garden</text>
-
-      <!-- Coordinate Annotations -->
-      <g id="annotations" font-size="11" fill="#666" font-family="sans-serif">
-        <text x="170" y="120">circle (cx=100, cy=100, r=40)</text>
-        <line x1="162" y1="116" x2="135" y2="110" stroke="#888" stroke-width="1" />
-
-        <text x="285" y="110">ellipse (cx=220, cy=90, rx=40, ry=25)</text>
-        <line x1="280" y1="110" x2="250" y2="108" stroke="#888" stroke-width="1" />
-
-        <text x="500" y="210">polygon points="300,220 400,150 500,220"</text>
-        <line x1="495" y1="208" x2="450" y2="190" stroke="#888" stroke-width="1" />
-
-        <text x="490" y="238">rect (x=320, y=220, w=160, h=120)</text>
-
-        <text x="378" y="262">line (x1=0, y1=15, x2=35, y2=15)</text>
-        <line x1="375" y1="260" x2="350" y2="255" stroke="#888" stroke-width="1" />
-
-        <text x="575" y="340">polyline points="200,340 ... 560,340"</text>
-
-        <text x="270" y="430">path M410 340 Q430 400 ...</text>
-      </g>
+      <text x="400" y="480" text-anchor="middle" font-size="24" fill="#1b4d1b" font-family="sans-serif">Welcome to the House &amp; Garden</text>
     </svg>
   </figure>
 
